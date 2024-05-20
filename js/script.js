@@ -1,6 +1,8 @@
 let form = document.forms["car-log"];
 form.addEventListener("submit", getValues);
 
+let carLog = [];
+
 function getValues(event) {
     event.preventDefault();
 
@@ -25,4 +27,17 @@ function getValues(event) {
     `
 
     document.querySelector(".out").innerHTML = out;
+
+    carLog.push(formdata);
+
+    document.getElementById('carsTotalAmount').innerHTML = carLog.length;
+
+    let totalValue = 0;
+
+    for(i = 0; i < carLog.length; i++){
+        totalValue += carLog[i].value;
+    }
+
+    document.getElementById('totalValue').innerHTML = totalValue;
+
 }
