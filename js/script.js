@@ -22,7 +22,7 @@ function getValues(event) {
         <p>Registration: <span>${formdata.registration}</span></p>
         <p>Condition: <span>${formdata['condition']}</span></p>
         <p>Value: R<span>${formdata.value}</span></p>
-    `;
+    `
 
     document.querySelector(".out").innerHTML = out;
 }
